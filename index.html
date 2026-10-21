@@ -1,9 +1,9 @@
+
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob: data:; connect-src 'self' https: wss: http://localhost:* http://127.0.0.1:* ws://localhost:* ws://127.0.0.1:*; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
 <title>HEBA OMEGA ULTIMATE — APEX SINGULARITY</title>
 <meta name="theme-color" content="#0d1117">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
@@ -46,11 +46,12 @@ pre{background:#0a0e14;border:1px solid var(--line);border-radius:8px;padding:12
 .feed{max-height:340px;overflow:auto}
 footer{padding:20px 16px;color:var(--mut);font-size:12.5px;text-align:center;border-top:1px solid var(--line);margin-top:24px}
 dialog{background:var(--panel);color:var(--tx);border:1px solid var(--line);border-radius:12px;max-width:760px;width:94%}
-dialog::backdrop{background:#000a}/* ===== وحدة المخططات الهندسية ===== */
+dialog::backdrop{background:#000a}
+
+/* ===== وحدة المخططات الهندسية ===== */
 .subnav{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
 .subnav button.on{background:var(--acc);border-color:var(--acc);color:#fff}
-.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
-.fgrid label{display:flex;flex-direction:column;font-size:12px;color:var(--mut);gap:3px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}.fgrid label{display:flex;flex-direction:column;font-size:12px;color:var(--mut);gap:3px}
 .fgrid input,.fgrid select{width:100%}
 .legal{background:#2a1f05;border:1px solid #6b4e0f;color:#f2cc60;border-radius:8px;padding:10px 12px;font-size:13px;margin:10px 0}
 .sheet{background:#fff;color:#000;border:1px solid #999;border-radius:4px;padding:10px;margin-top:12px;font-family:Arial,Helvetica,sans-serif;direction:ltr;text-align:left;font-size:12px;line-height:1.35}
@@ -89,16 +90,15 @@ dialog::backdrop{background:#000a}/* ===== وحدة المخططات الهند�
 @media (prefers-reduced-motion:reduce){.twin .rot,.twin .flow,.twin .shake,.twin .flame,.twin .smoke,.twin .press{animation:none}}
 @media print{
   html,body{background:#fff!important}
-  header,.sim,nav,footer,.noprint,#toast,#cmdbar{display:none!important}main{padding:0!important;max-width:none!important}
+  header,.sim,nav,footer,.noprint,#toast,#cmdbar{display:none!important}
+  main{padding:0!important;max-width:none!important}
   .sheet{margin:0!important;border:none!important;padding:0!important;font-size:11px}
   .sheet h4,.sheet table,.sheet svg,.sheet .discl{break-inside:avoid}
   .sheet svg{max-height:var(--svgmax,185mm);width:auto;max-width:100%;margin:0 auto}
   .sheet img{max-height:80mm;break-inside:avoid}
   .sheet h4{break-after:avoid}
   #view>h2{display:none}
-}
-
-/* ===== ثيمة الكود الثالث ===== */
+}/* ===== ثيمة الكود الأصلي الكامل ===== */
 :root{--gold:#f59e0b;--bg:#07080a;--panel:#0f131a;--panel2:#161b24;--line:#1e293b;--tx:#f8fafc;--mut:#94a3b8;--acc:#0ea5e9}
 header{border-bottom:2px solid var(--gold)}
 header h1{color:var(--gold);font-weight:900;letter-spacing:.5px}
@@ -147,13 +147,13 @@ button.p{background:var(--gold);border-color:var(--gold);color:#000;font-weight:
 </head>
 <body>
 <header>
-  <h1>HEBA OMEGA ULTIMATE — APEX SINGULARITY<small>المنظومة الهندسية والصناعية المتكاملة — محمود السيسي</small></h1><span id="clock" class="note"></span>
+  <h1>HEBA OMEGA ULTIMATE — APEX SINGULARITY<small>المنظومة الهندسية والصناعية المتكاملة — محمود السيسي</small></h1>
+  <span id="clock" class="note"></span>
   <button id="ownChip" class="b" title="وضع المالك (قفل محلي للتعديل)"></button>
   <span id="sealMini" class="chip s9 mono"></span>
 </header>
-<div class="sim" id="simBar">⚠ البيانات الحية المعروضة <b>محاكاة تجريبية</b> لأغراض العرض. لربط قراءات حقيقية استخدم الدالة <code>HEBA.ingest()</code> (انظر تبويب «الختم والإعدادات»).</div>
-<nav id="nav"></nav>
-<div id="cmdbar" class="noprint"><input id="cmdIn" placeholder="اكتب أو انطق أمراً: «ولّد محطة خرسانة 120» · «Generate asphalt drum» · «صدّر DXF»" aria-label="أمر"><button class="b p" id="cmdRun">تنفيذ</button><button class="b" id="cmdMic" title="إملاء صوتي — في Chrome يُعالَج الصوت عبر خدمة التعرف الصوتي للمتصفح">🎙️</button><select id="cmdLang" aria-label="لغة الإملاء"><option value="ar-EG">عربي</option><option value="en-US">English</option></select><span id="cmdMsg" class="note">الأوامر تعمل بالعربية والإنجليزية. اكتب «مساعدة» لعرض الأمثلة.</span></div>
+<div class="sim" id="simBar">⚠ البيانات الحية المعروضة <b>محاكاة تجريبية</b> لأغراض العرض. لربط قراءات حقيقية استخدم الدالة <code>HEBA.ingest()</code> (انظر تبويب «الختم والإعدادات»).</div><nav id="nav"></nav>
+<div id="cmdbar" class="noprint"><input id="cmdIn" placeholder="اكتب أو انطق أمراً: «ولّد محطة خرسانة 120» · «Generate asphalt drum» · «صدّر DXF»" aria-label="أمر"><button class="b p" id="cmdRun">تنفيذ</button><button class="b" id="cmdMic" title="إملاء صوتي">🎙️</button><select id="cmdLang" aria-label="لغة الإملاء"><option value="ar-EG">عربي</option><option value="en-US">English</option></select><span id="cmdMsg" class="note">الأوامر تعمل بالعربية والإنجليزية. اكتب «مساعدة» لعرض الأمثلة.</span></div>
 <main id="view"></main>
 <footer>
   إطار R55.0 (صيغة إخلاء المسؤولية في المنصة): نظام استشاري — مخرجاته مسودات لا تغني عن فحص ومراجعة وتوقيع مهندس/استشاري مرخّص قبل أي تنفيذ أو تشغيل فعلي.<br>
@@ -161,7 +161,6 @@ button.p{background:var(--gold);border-color:var(--gold);color:#000;font-weight:
 </footer>
 
 <dialog id="dlg"><div id="dlgBody"></div><div class="row" style="margin-top:12px"><button class="b" id="dlgClose">إغلاق</button><button class="b p" id="dlgSave">تنزيل JSON</button></div></dialog>
-
 <div id="toast" role="status"></div>
 <dialog id="ownDlg"><div id="ownBody"></div></dialog>
 
@@ -228,54 +227,19 @@ const SHA3 = (() => {
   }
   return { sha3_512 };
 })();
-/*KECCAK_END*//* ===================== أدوات ===================== */
-const $ = (s, r = document) => r.querySelector(s);
-const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const fmt = (n, d = 1) => Number(n).toFixed(d);
-const nowISO = () => new Date().toISOString();
-const fdate = iso => new Date(iso).toLocaleString("ar-EG", { hour12: false });
-const rnd = (a = 1) => (Math.random() - 0.5) * 2 * a;
-function download(name, text, type = "application/json") {
-  try { bbAdd("download", { n: name, len: String(text).length }); } catch (e) {}
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([text], { type }));
-  a.download = name; document.body.appendChild(a); a.click(); a.remove();
-}
+/*KECCAK_END*/
 
-/* ===================== الملكية والبصمة ===================== */
 const OWNER = { name: "Mahmoud El-Sisi", stage: "محمود السيسي", version: "Apex-Singularity-2026.10" };
 const SEAL_PAYLOAD = ${OWNER.name}:${OWNER.version}:Singularity_Absolute_Core;
 const SEAL_HASH = SHA3.sha3_512(SEAL_PAYLOAD);
 const SEAL_ID = "HOU-SINGULARITY-APEX-" + SEAL_HASH.slice(0, 16).toUpperCase();
 
-/* ===================== وضع المالك (قفل محلي — ليس حماية أمنية) ===================== */
-let _toastT = 0;
-function toast(msg, ms = 3800) { const t = $("#toast"); if (!t) return; t.textContent = msg; t.style.display = "block"; clearTimeout(_toastT); _toastT = setTimeout(() => { t.style.display = "none"; }, ms); }
-const OWN_KEY = "heba_owner_v1";
-let OWN = null; try { OWN = JSON.parse(localStorage.getItem(OWN_KEY)); } catch (e) {}
-const ownSave = () => { try { bbAdd("owner", { st: ownState() }); } catch (e) {} try { if (OWN) localStorage.setItem(OWN_KEY, JSON.stringify(OWN)); else localStorage.removeItem(OWN_KEY); } catch (e) {} };
-const ownState = () => !OWN ? "open" : OWN.locked ? "locked" : "owner";
-const ownHash = (email, dev) => SHA3.sha3_512(String(email).trim().toLowerCase() + ":" + dev);
-const GATED = new Set(["toggle", "svc", "del", "add", "logadd", "reset", "bindsel"]);
-function ownChip() {
-  const c = $("#ownChip"), st = ownState();
-  c.textContent = st === "open" ? "🔓 وضع المالك: غير مفعّل" : st === "owner" ? "🔑 المالك: " + OWNER.stage : "🔒 مقفل (قراءة فقط)";
-  c.className = "b chip " + (st === "locked" ? "s2" : st === "owner" ? "s0" : "s9");
-}
-function ownDialog() {
-  const st = ownState(), email = '<label style="display:flex;flex-direction:column;gap:3px;font-size:12px;color:var(--mut)">بريد المالك<input id="ownEmail" type="email" autocomplete="off" placeholder="name@example.com"></label>';
-  let body = <h2>وضع المالك</h2><div class="legal">⚠ هذا <b>قفل راحة محلي</b> يعمل داخل هذا المتصفح فقط لمنع التعديل غير المقصود (تشغيل/حذف/إضافة/مسح). <b>ليس حماية أمنية</b>: الصفحة ساكنة، ويستطيع أي شخص قراءة شفرتها أو فتحها من متصفح آخر. للمنع الفعلي لأي دخول غير مصرّح: مستودع خاص، أو Cloudflare Access / مصادقة على الخادم / مفاتيح Passkeys.</div><p class="note">لا تُخزَّن كلمة سر ولا البريد نفسه؛ يُخزَّن فقط SHA3-512 لـ (البريد + معرّف عشوائي لهذا الجهاز).</p>;
-  if (st === "open") body += email + '<div class="row" style="margin-top:10px"><button class="b p" data-o="claim">تفعيل وضع المالك على هذا الجهاز</button><button class="b" data-o="close">إغلاق</button></div>';
-  else if (st === "owner") body += '<p>المالك مسجَّل على هذا الجهاز ويدخل تلقائياً.</p><div class="row"><button class="b" data-o="lock">🔒 قفل التعديل الآن</button><button class="b d" data-o="forget">إلغاء تسجيل الجهاز</button><button class="b" data-o="close">إغلاق</button></div>';
-  else body += '<p>الصفحة مقفلة. أدخل بريد المالك لفتح التعديل على هذا الجهاز.</p>' + email + '<div class="row" style="margin-top:10px"><button class="b p" data-o="unlock">فتح</button><button class="b" data-o="close">إغلاق</button></div>';
-  body += '<p id="ownMsg" class="note"></p>';$("#ownBody").innerHTML = body; $("#ownDlg").showModal();
-}
-document.addEventListener("click", ev => {
-  if (ev.target.closest("#ownChip")) { ownDialog(); return; }
-  const b = ev.target.closest("[data-o]"); if (!b) return; const a = b.dataset.o, msg = t => { $("#ownMsg").textContent = t; };
-  const em = ($("#ownEmail")  {}).value  "";
-  if (a === "close") $("#ownDlg").close();
-  else if (a === "claim") {
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.trim())) { msg("أدخل بريداً صحيحاً."); return; }
-    const dev = [...crypto.getRandomValues(new Uint8Array(16))].map(x => x.toString(16).padStart(2, "0")).join("");
-    OWN = { dev, h: ownHash(em, dev), t: nowISO(), locked: false }; ownSave(); ownChip(); $("#ownDlg").close(); toas
+document.addEventListener("DOMContentLoaded", () => {
+  const sm = document.getElementById("sealMini");
+  if(sm) sm.textContent = SEAL_ID;
+  const sf = document.getElementById("sealFoot");
+  if(sf) sf.textContent = "SHA3-512 Seal: " + SEAL_ID;
+});
+</script>
+</body>
+</html>
